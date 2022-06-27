@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingTop="30dp"
+            android:layout_height="match_parent"
+            android:background="#E1F5FE">
+
+
+            <TextView
+                android:id="@+id/discountedItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Discounted Items"
+                android:textColor="#0D47A1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/paprika"
+                app:layout_constraintBottom_toTopOf="@id/discountedItemsRecycler"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/productsRecyclerView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/discountedItemsRecycler"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/productsRecyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/discountedItems" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productsRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/discountedItemsRecycler"
+                app:spanCount="2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>

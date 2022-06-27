@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="productModel"
+        type="com.bestesarac.capstoneproject.ProductsModel" />
+
+</data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#0D47A1"
+        app:strokeWidth="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/itemImageView"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_margin="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/itemNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="start|center"
+                android:lines="2"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/paprika"
+                android:text="@{productModel.title}"
+                android:textColor="#0D47A1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemImageView"
+                tools:text="Item" />
+
+            <TextView
+                android:id="@+id/itemCategoryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="start|center"
+                android:lines="2"
+                android:fontFamily="@font/paprika"
+                android:textAlignment="textStart"
+                android:textColor="#0D47A1"
+                android:text="@{productModel.category}"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemNameText"
+                tools:text="Category" />
+
+            <TextView
+                android:id="@+id/itemPriceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="#0D47A1"
+                android:textSize="16sp"
+                android:fontFamily="@font/paprika"
+                android:textStyle="bold"
+                android:text='@{productModel.price+ " $"}'
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemCategoryText"
+                tools:text="Price" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

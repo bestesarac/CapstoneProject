@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E1F5FE"
+        tools:context="SignupFragment">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/paprika"
+        android:text="WELCOME MILUNA SHOP"
+        android:textAlignment="center"
+        android:textColor="#0D47A1"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/emailInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        style="@style/butonstyle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="232dp"
+        android:text="Sıgn Up"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/paprika"
+        android:textColorHint="#0D47A1"
+        app:boxStrokeColor="#0D47A1"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:startIconDrawable="@drawable/ic_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/paprika"
+            android:hint="E-mail"
+            android:textColor="#0D47A1"
+            android:textColorHint="#0D47A1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:fontFamily="@font/paprika"
+        android:textColorHint="#0D47A1"
+        app:boxStrokeColor="#0D47A1"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailInputLayout"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/ic_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/paprika"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#0D47A1"
+            android:textColorHint="#0D47A1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/gosigninText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/paprika"
+        android:text="Already have an account?"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton"
+        app:layout_constraintVertical_bias="0.539" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

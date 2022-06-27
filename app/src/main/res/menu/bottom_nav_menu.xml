@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/bagFragment"
+        android:icon="@drawable/ic_bag"
+        android:title="Bag"
+        android:enabled="true" />
+
+    <item
+        android:id="@+id/favoriteFragment"
+        android:icon="@drawable/ic_favoriteunselected"
+        android:title="Favorite"
+        android:enabled="true"/>
+
+
+</menu>

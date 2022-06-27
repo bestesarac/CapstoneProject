@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginnav"
+    app:startDestination="@id/signupFragment">
+
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.bestesarac.capstoneproject.SigninFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_signin">
+        <action
+            android:id="@+id/action_signinFragment_to_mainnav"
+            app:destination="@id/mainnav" />
+        <action
+            android:id="@+id/action_signinFragment_to_forgotpasswordFragment"
+            app:destination="@id/forgotpasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.bestesarac.capstoneproject.SignupFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+        <action
+            android:id="@+id/action_signupFragment_to_mainnav"
+            app:destination="@id/mainnav" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotpasswordFragment"
+        android:name="com.bestesarac.capstoneproject.ForgotpasswordFragment"
+        android:label="Reset Password">
+        <action
+            android:id="@+id/action_forgotpasswordFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+    </fragment>
+    <include app:graph="@navigation/mainnav" />
+</navigation>
